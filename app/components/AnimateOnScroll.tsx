@@ -1,8 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
-export default function AnimateOnScroll({ children, delay = 0, className = "" }) {
+type AnimateOnScrollProps = {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+};
+
+export default function AnimateOnScroll({
+  children,
+  delay = 0,
+  className = "",
+}: AnimateOnScrollProps) {
   return (
     <motion.div
       className={className}
