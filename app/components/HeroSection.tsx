@@ -95,7 +95,7 @@ export default function HeroSection() {
             {/* Pria */}
             <div className="flex flex-col gap-1.5 items-center">
               <p className="font-serif text-xl md:text-2xl text-white drop-shadow-sm mb-2">
-                Muhammad Athfal Aulia Putra
+                Muhammad Athfal Aulia Putra, S.Kom
               </p>
               <p className="font-sans text-xs md:text-sm text-white/50 leading-relaxed">
                 Putra dari Bapak Hendra Gunawan, S.Sos, M.M
