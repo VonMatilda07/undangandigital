@@ -34,9 +34,9 @@ export default function OpeningMessage() {
 
       {/* --- FIX: UKURAN NAMA DIPERBESAR DRASTIS --- */}
       <div className="flex items-center gap-6 md:gap-8">
-        <p className="font-serif text-4xl md:text-5xl text-white drop-shadow-sm">Putra</p>
-        <span className="text-gold opacity-60 text-xl font-serif italic">&</span>
-        <p className="font-serif text-4xl md:text-5xl text-white drop-shadow-sm">Jia</p>
+        <p className="font-cursive text-5xl md:text-6xl text-white drop-shadow-sm">Putra</p>
+        <span className="text-gold opacity-60 text-2xl font-serif italic">&</span>
+        <p className="font-cursive text-5xl md:text-6xl text-white drop-shadow-sm">Jia</p>
       </div>
 
     </section>

@@ -87,7 +87,7 @@ export default function AdminPage() {
           Admin Panel
         </p>
         <h1 className="font-serif text-4xl text-white">Putra & Jia</h1>
-        <p className="font-sans text-xs text-white/30 mt-2">28 Juni 2026</p>
+        <p className="font-sans text-xs text-white/30 mt-2">14 Juni 2026</p>
       </div>
 
       {/* Tabs */}

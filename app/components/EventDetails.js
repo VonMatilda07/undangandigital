@@ -26,24 +26,24 @@ function EventCard({ type, date, time, venue, address, embedUrl }) {
         {address}
       </p>
 
-     {/* Embed Maps */}
-<div className="w-full mt-2 overflow-hidden"
-  style={{
-    border: "1px solid #D4AF37",
-    boxShadow: "0 0 0 1px #D4AF3740, 0 4px 24px #D4AF3720",
-    padding: "4px",
-  }}
->
-  <iframe
-    src={embedUrl}
-    width="100%"
-    height="200"
-    style={{ border: 0, display: "block" }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
+      {/* Embed Maps */}
+      <div className="w-full mt-2 overflow-hidden"
+        style={{
+          border: "1px solid #D4AF37",
+          boxShadow: "0 0 0 1px #D4AF3740, 0 4px 24px #D4AF3720",
+          padding: "4px",
+        }}
+      >
+        <iframe
+          src={embedUrl}
+          width="100%"
+          height="200"
+          style={{ border: 0, display: "block" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
 
     </div>
   );
@@ -68,12 +68,12 @@ export default function EventDetails() {
       {/* Card */}
       <div className="w-full max-w-sm">
         <EventCard
-          type="Resepsi Pernikahan"
-          date="Minggu, 28 Juni 2026"
-          time="09.00 – 15.00 WITA"
-          venue="Gedung Dewan Masjid Indonesia"
+          type="Akad Nikah & Tasyakuran"
+          date="Minggu, 14 Juni 2026"
+          time="11.00 – 16.00 WITA"
+          venue="Rumah Mempelai Wanita"
           address="Tenggarong, Kutai Kartanegara, Kalimantan Timur"
-          embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4244.251148683115!2d116.98912277496471!3d-0.4412978995543731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67b00087e2b5f%3A0x57ad0f40ad468282!2sDMI%20Kukar!5e1!3m2!1sen!2sid!4v1775209623212!5m2!1sen!2sid"
+          embedUrl="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d477.28388857416934!2d116.99015606470083!3d-0.4343240115708805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1780580115266!5m2!1sen!2sid"
         />
       </div>
 

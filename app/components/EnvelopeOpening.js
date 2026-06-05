@@ -2,25 +2,26 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import confetti from "canvas-confetti"; // IMPORT CONFETTI DI SINI
+import confetti from "canvas-confetti";
 
-export default function EnvelopeOpening({ onOpen }) {
+export default function EnvelopeOpening({ onOpen, onClickEnvelope }) {
   const searchParams = useSearchParams();
   const guestName = searchParams.get("to");
   
   const [opened, setOpened] = useState(false);
   const [cardOut, setCardOut] = useState(false);
-  
   const [envelopeHidden, setEnvelopeHidden] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
   const [leaving, setLeaving] = useState(false);
 
   function handleOpen() {
     if (opened) return;
+
+    // Play musik langsung saat diklik
+    onClickEnvelope?.();
+
     setOpened(true);
     
-    // FIRE THE GOLD PARTICLES! 
-    // Warnanya kita set khusus nuansa emas & sedikit putih biar elegan
     confetti({
       particleCount: 100,
       spread: 90,
@@ -62,7 +63,6 @@ export default function EnvelopeOpening({ onOpen }) {
         }}
       >
         
-        {/* GRUP TEKS DI ATAS AMPLOP */}
         <div 
           className="flex flex-col items-center text-center gap-4 mb-12"
           style={{ opacity: opened ? 0 : 1, transition: "opacity 0.3s ease" }}
@@ -83,7 +83,6 @@ export default function EnvelopeOpening({ onOpen }) {
           )}
         </div>
 
-        {/* Amplop Clickable Container */}
         <div
           className="relative cursor-pointer select-none"
           style={{ width: 300, height: 200 }}
@@ -91,7 +90,6 @@ export default function EnvelopeOpening({ onOpen }) {
         >
           <div className="absolute inset-0 border border-gold/10" style={{ background: "#1a1a1a", zIndex: 0 }} />
           
-          {/* Kartu dalam amplop */}
           <div
             className="absolute border border-gold/30 flex flex-col items-center justify-center gap-2 overflow-hidden"
             style={{
@@ -103,10 +101,10 @@ export default function EnvelopeOpening({ onOpen }) {
             }}
           >
             <div style={{ opacity: opened ? 1 : 0, transition: "opacity 0.2s ease 0.6s" }} className="flex flex-col items-center justify-center gap-1">
-              <p className="font-serif text-2xl text-white">Putra</p>
+              <p className="font-cursive text-4xl text-white">Putra</p>
               <p className="text-gold/60 text-sm">✦</p>
-              <p className="font-serif text-2xl text-white">Jia</p>
-              <p className="font-sans text-xs tracking-widest text-white/30 uppercase mt-1">28 Juni 2026</p>
+              <p className="font-cursive text-4xl text-white">Jia</p>
+              <p className="font-sans text-xs tracking-widest text-white/30 uppercase mt-1">14 Juni 2026</p>
             </div>
           </div>
 
@@ -140,7 +138,6 @@ export default function EnvelopeOpening({ onOpen }) {
           Buka Undangan
         </button>
       </div>
-
 
       {/* ================= STAGE 2: LAYAR SAPAAN ================= */}
       <div

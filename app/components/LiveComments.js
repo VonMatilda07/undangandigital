@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function CommentCard({ nama, kehadiran, ucapan, timestamp }) {
   const date = new Date(timestamp);
@@ -52,17 +52,28 @@ export default function LiveComments() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const commentsRef = useRef([]);
+
+  useEffect(() => {
+    commentsRef.current = comments;
+  }, [comments]);
+
   async function fetchComments() {
     try {
       const res = await fetch("/api/comments", { cache: "no-store" });
       const json = await res.json();
       if (json.success) {
         setComments(json.data);
+        setError(null);
       } else {
-        setError("Gagal memuat ucapan.");
+        if (commentsRef.current.length === 0) {
+          setError("Gagal memuat ucapan.");
+        }
       }
     } catch {
-      setError("Gagal memuat ucapan.");
+      if (commentsRef.current.length === 0) {
+        setError("Gagal memuat ucapan.");
+      }
     } finally {
       setLoading(false);
     }

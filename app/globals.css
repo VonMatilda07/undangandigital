@@ -9,6 +9,7 @@
   /* WAJIB PAKAI var() BIAR NYAMBUNG SAMA NEXT.JS */
   --font-serif: var(--font-cormorant), ui-serif, serif;
   --font-sans: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-cursive: var(--font-great-vibes), cursive;
 }
 body {
   background-color: var(--color-bg-dark);

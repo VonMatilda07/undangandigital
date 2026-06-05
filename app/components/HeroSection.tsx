@@ -64,7 +64,7 @@ export default function HeroSection() {
           </div>
 
           {/* Nama pengantin pria (Di-gede-in ke 9xl di layar besar) */}
-          <h1 className="font-serif text-7xl md:text-9xl text-white leading-tight drop-shadow-md">
+          <h1 className="font-cursive text-8xl md:text-9xl text-white py-2 drop-shadow-md">
             Putra
           </h1>
 
@@ -76,13 +76,13 @@ export default function HeroSection() {
           </div>
 
           {/* Nama pengantin wanita (Di-gede-in ke 9xl di layar besar) */}
-          <h1 className="font-serif text-7xl md:text-9xl text-white leading-tight drop-shadow-md">
+          <h1 className="font-cursive text-8xl md:text-9xl text-white py-2 drop-shadow-md">
             Jia
           </h1>
 
           {/* Tanggal */}
           <p className="font-sans text-sm md:text-base tracking-[0.25em] text-gold uppercase mt-12 opacity-80">
-            Minggu, 28 Juni 2026
+            Minggu, 14 Juni 2026
           </p>
 
           {/* Lokasi */}

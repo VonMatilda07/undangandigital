@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // Tanggal hari H
-const TARGET_DATE = new Date("2026-06-28T08:00:00");
+const TARGET_DATE = new Date("2026-06-14T11:00:00");
 
 function getTimeLeft() {
   const now = new Date();
@@ -40,6 +40,7 @@ export default function CountdownTimer() {
 
   useEffect(() => {
     setMounted(true); // Trik biar gak kena hydration error di Next.js
+    setTimeLeft(getTimeLeft());
     const interval = setInterval(() => {
       setTimeLeft(getTimeLeft());
     }, 1000);

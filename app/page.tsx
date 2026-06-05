@@ -1,36 +1,39 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useState, useRef } from "react";
 import CustomCursor from "./components/CustomCursor";
 import ParticleBackground from "./components/ParticleBackground";
 import HeroSection from "./components/HeroSection";
 import QuranVerse from "./components/QuranVerse";
 import CountdownTimer from "./components/CountdownTimer";
 import OpeningMessage from "./components/OpeningMessage";
-import TurutMengundang from "./components/TurutMengundang"; // <-- Import ditambah di sini
+import TurutMengundang from "./components/TurutMengundang";
 import EventDetails from "./components/EventDetails";
 import RSVPForm from "./components/RSVPForm";
-import LiveComments from "./components/LiveComments"; // <-- Import LiveComments
-import MusicPlayer from "./components/MusicPlayer";
+import LiveComments from "./components/LiveComments";
 import AnimateOnScroll from "./components/AnimateOnScroll";
 import EnvelopeOpening from "./components/EnvelopeOpening";
+import MusicPlayer from "./components/MusicPlayer";
+import { MusicPlayerRef } from "./components/MusicPlayer";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const musicRef = useRef<MusicPlayerRef>(null);
 
   return (
-    // Tambahin class relative dan atur overflow pas amplop belum dibuka
     <main className={`relative bg-bg-dark text-white ${!isOpen ? "h-screen overflow-hidden" : ""}`}>
-      
-      {/* Elemen Global (Kursor & Background Bintang) ditaruh paling atas */}
+
       <CustomCursor />
       <ParticleBackground />
 
-      <MusicPlayer isOpen={isOpen} />
+      <MusicPlayer ref={musicRef} isOpen={isOpen} />
 
       {!isOpen && (
         <Suspense fallback={null}>
-          <EnvelopeOpening onOpen={() => setIsOpen(true)} />
+          <EnvelopeOpening
+            onOpen={() => setIsOpen(true)}
+            onClickEnvelope={() => musicRef.current?.play()}
+          />
         </Suspense>
       )}
 
@@ -48,7 +51,6 @@ export default function Home() {
         <OpeningMessage />
       </AnimateOnScroll>
 
-      {/* --- TAMBAHAN TURUT MENGUNDANG DI SINI --- */}
       <AnimateOnScroll delay={100}>
         <TurutMengundang />
       </AnimateOnScroll>

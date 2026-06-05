@@ -2,9 +2,10 @@ export default function TurutMengundang() {
   const keluarga = [
     "H. A. S. Syahiel Anwar (Alm.)",
     "Achmid Achmad (Alm.)",
-    "Ratna Maksum",
+    "Hj. Ratna Maksum",
     "Ahmad Taking (Alm.)",
     "Sayid Usman",
+    " Ishaq Ali "
   ];
 
   return (
