@@ -72,7 +72,7 @@ export default function EventDetails() {
           date="Minggu, 14 Juni 2026"
           time="11.00 – 16.00 WITA"
           venue="Rumah Mempelai Wanita"
-          address="Tenggarong, Kutai Kartanegara, Kalimantan Timur"
+          address="Jl. Naga, Tenggarong, Kutai Kartanegara, Kalimantan Timur"
           embedUrl="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d477.28388857416934!2d116.99015606470083!3d-0.4343240115708805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sid!4v1780580115266!5m2!1sen!2sid"
         />
       </div>
