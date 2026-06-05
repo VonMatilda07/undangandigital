@@ -10,7 +10,7 @@ const WA_MESSAGE = (name: string, link: string) =>
 Kepada Yth,
 ${name}
 
-Dengan memohon ridho Allah SWT, kami mengundang kehadiran Bapak/Ibu/Saudara/i pada resepsi pernikahan kami.
+Dengan memohon ridho Allah SWT, kami mengundang kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami.
 
 Untuk informasi lengkap, silakan buka undangan digital kami di bawah ini 👇
 
@@ -96,11 +96,10 @@ export default function AdminPage() {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`flex-1 py-3 font-sans text-xs tracking-widest uppercase transition-colors duration-300 ${
-              tab === t
+            className={`flex-1 py-3 font-sans text-xs tracking-widest uppercase transition-colors duration-300 ${tab === t
                 ? "text-gold border-b-2 border-gold"
                 : "text-white/30 hover:text-white/60"
-            }`}
+              }`}
           >
             {t === "generator" ? "Generator Link" : "Data RSVP"}
           </button>
@@ -225,11 +224,10 @@ export default function AdminPage() {
                   <div className="flex items-center justify-between">
                     <p className="font-serif text-white">{r.nama}</p>
                     <span
-                      className={`font-sans text-xs uppercase tracking-widest px-2 py-1 border ${
-                        r.kehadiran === "Hadir"
+                      className={`font-sans text-xs uppercase tracking-widest px-2 py-1 border ${r.kehadiran === "Hadir"
                           ? "border-gold/30 text-gold/70"
                           : "border-white/10 text-white/30"
-                      }`}
+                        }`}
                     >
                       {r.kehadiran === "Hadir"
                         ? `✦ Hadir · ${r.jumlah} orang`

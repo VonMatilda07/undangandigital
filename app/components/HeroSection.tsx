@@ -13,33 +13,33 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center pb-24 overflow-hidden bg-bg-dark">
-      
+
       {/* 1. LAYER VIGNETTE PERMANEN */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{ background: "radial-gradient(circle at center, transparent 30%, #0B0B0B 100%)" }}
       />
 
       {/* 2. LAYER ANIMASI "MENERANG" */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-50 bg-bg-dark"
         style={{
           opacity: mounted ? 0 : 1,
-          transition: "opacity 2.5s cubic-bezier(0.4, 0, 0.2, 1)", 
+          transition: "opacity 2.5s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       />
 
       {/* 3. KONTEN UTAMA */}
       <Parallax speed={0.2} className="z-10 flex flex-col items-center w-full">
-        <div 
+        <div
           className="flex flex-col items-center w-full"
           style={{
             opacity: mounted ? 1 : 0,
             transform: mounted ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 2s ease 0.5s, transform 2s ease 0.5s", 
+            transition: "opacity 2s ease 0.5s, transform 2s ease 0.5s",
           }}
         >
-          
+
           {/* --- UPDATE DARI TEMEN LU --- */}
           <div className="flex flex-col items-center gap-3 mb-10">
             <div className="flex items-center gap-3">
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
             {/* Teks gue sesuaikan sizenya sedikit biar lebih balance di mobile & desktop */}
             <p className="font-serif text-lg md:text-xl italic text-white/70 tracking-wide mt-1">
-              Undangan Resepsi
+              Undangan
             </p>
             <p className="font-sans text-xs md:text-sm tracking-[0.4em] text-gold/80 uppercase mb-1">
               Pernikahan
