@@ -1,16 +1,17 @@
 export default function TurutMengundang() {
   const keluarga = [
-    "H. A. S. Syahiel Anwar (Alm.)",
     "Achmid Achmad (Alm.)",
     "Hj. Ratna Maksum",
     "Ahmad Taking (Alm.)",
-    "Sayid Usman",
-    " Ishaq Ali "
+    "H. Sayid Usman Alhabsyi",
+    "Drs. H. Iskandar Zulkarnain (Alm.)",
+    "Alfian, S.Sos",
+    "Ardiansyah"
   ];
 
   return (
     <section className="py-24 px-6 flex flex-col items-center text-center max-w-3xl mx-auto">
-      
+
       {/* Label Atas */}
       <p className="font-sans text-xs tracking-[0.3em] text-gold uppercase opacity-80 mb-4">
         Turut Mengundang

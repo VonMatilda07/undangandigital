@@ -101,15 +101,16 @@ export default function RSVPForm() {
           {formData.kehadiran === "Hadir" && (
             <div className="flex flex-col gap-2 mt-2">
               <label className="text-xs text-gold/80 uppercase tracking-widest">Jumlah Tamu</label>
-              <select
+              <input
+                type="number"
                 name="jumlah"
+                min="1"
+                required
                 value={formData.jumlah}
                 onChange={handleChange}
-                className="bg-[#111] border-b border-white/20 pb-2 text-white/80 font-serif text-lg focus:outline-none focus:border-gold transition-colors w-full cursor-pointer"
-              >
-                <option value="1">1 Orang</option>
-                <option value="2">2 Orang</option>
-              </select>
+                className="bg-transparent border-b border-white/20 pb-2 text-white font-serif text-lg focus:outline-none focus:border-gold transition-colors w-full"
+                placeholder="Contoh: 3"
+              />
             </div>
           )}
 

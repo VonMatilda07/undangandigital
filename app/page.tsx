@@ -15,6 +15,7 @@ import AnimateOnScroll from "./components/AnimateOnScroll";
 import EnvelopeOpening from "./components/EnvelopeOpening";
 import MusicPlayer from "./components/MusicPlayer";
 import { MusicPlayerRef } from "./components/MusicPlayer";
+import WeddingGift from "./components/WeddingGift";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,10 @@ export default function Home() {
 
       <AnimateOnScroll delay={100}>
         <EventDetails />
+      </AnimateOnScroll>
+
+      <AnimateOnScroll delay={100}>
+        <WeddingGift />
       </AnimateOnScroll>
 
       <AnimateOnScroll delay={100}>
